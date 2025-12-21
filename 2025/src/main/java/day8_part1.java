@@ -57,7 +57,7 @@ public class day8_part1 {
     public static void main(String[] args) throws Exception {
         int Limit = 1000;
         List<long[]> points = new ArrayList<>();
-        File file = new File("src/main/java/testInput/input8.txt");
+        File file = new File("src/main/java/src/main/java/testInput/input8.txt");
         Scanner sc = new Scanner(file);
         while(sc.hasNext()){
             String line = sc.nextLine();

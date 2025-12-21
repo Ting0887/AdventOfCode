@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class day5_part1 {
     public static void main(String[] args) throws Exception{
-        File file = new File("input5.txt");
+        File file = new File("src/main/java/testInput/input5.txt");
         Scanner sc = new Scanner(file);
         List<String> rangeList = new ArrayList<>();
         List<BigInteger> InputNums = new ArrayList<>();

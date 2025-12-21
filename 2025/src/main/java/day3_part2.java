@@ -7,7 +7,7 @@ public class day3_part2 {
         ex. 811111111111119 -> 811111111119
             234234234234278 -> 434234234278
         */
-       File file = new File("input3.txt");
+       File file = new File("src/main/java/testInput/input3.txt");
        Scanner scanner = new Scanner(file);
        int targetLength = 12;
        long ans = 0;

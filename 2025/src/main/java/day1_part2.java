@@ -6,7 +6,7 @@ public class day1_part2 {
         int start = 50;
         int countZero = 0;
 
-        File file = new File("input1.txt");
+        File file = new File("src/main/java/testInput/input1.txt");
         Scanner scanner = new Scanner(file);
 
         while(scanner.hasNext()){

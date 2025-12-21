@@ -16,7 +16,7 @@ public class day7_part1 {
     }
 
     public static void main(String[] args) throws Exception {
-        File file = new File("input7.txt");
+        File file = new File("src/main/java/testInput/input7.txt");
         Scanner sc = new Scanner(file);
 
         List<char[]> grid = new ArrayList<>();

@@ -14,7 +14,7 @@ public class day9_part2 {
     }
 
     public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(new File("testInput/input9.txt"));
+        Scanner sc = new Scanner(new File("src/main/java/testInput/input9.txt"));
         List<P> red = new ArrayList<>();
         while (sc.hasNext()) {
             String[] s = sc.nextLine().split(",");

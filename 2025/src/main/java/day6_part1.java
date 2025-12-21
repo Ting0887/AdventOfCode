@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.io.File;
 public class day6_part1 {
     public static void main(String[] args) throws Exception{
-        File file = new File("input6.txt");
+        File file = new File("src/main/java/testInput/input6.txt");
         Scanner sc = new Scanner(file);
         List<List<Long>> totalNum = new ArrayList<>();
         List<String> operatorList = new ArrayList<>();

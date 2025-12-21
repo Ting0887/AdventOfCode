@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class day6_part2 {
     public static void main(String[] args) throws Exception {
         List<String> rawLines = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("input6.txt"))) {
+        try (BufferedReader br = new BufferedReader(new FileReader("src/main/java/testInput/input6.txt"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 rawLines.add(line);

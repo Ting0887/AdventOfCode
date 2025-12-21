@@ -18,7 +18,7 @@ public class day4_part1 {
         .@@@@@@@@.
         x.x.@@@.x.
         */
-       File file = new File("input4.txt");
+       File file = new File("src/main/java/testInput/input4.txt");
        Scanner sc = new Scanner(file);
        List<String[]> arrLst = new ArrayList<>();
        while(sc.hasNext()){

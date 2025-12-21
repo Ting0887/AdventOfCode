@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 public class day9_part1 {
     public static void main(String[] args) throws Exception {
-        File file = new File("testInput/input9.txt");
+        File file = new File("src/main/java/testInput/input9.txt");
         Scanner sc = new Scanner(file);
         List<long[]> points = new ArrayList<>();
         while(sc.hasNext()){

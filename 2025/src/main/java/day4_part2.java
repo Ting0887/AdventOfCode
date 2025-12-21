@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class day4_part2 {
     public static void main(String[] args) throws Exception{
-        File file = new File("input4.txt");
+        File file = new File("src/main/java/testInput/input4.txt");
         Scanner sc = new Scanner(file);
         List<String[]> arrLst = new ArrayList<>();
         while(sc.hasNext()){

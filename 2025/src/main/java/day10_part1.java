@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 public class day10_part1 {
     public static void main(String[] args) throws Exception {
-        File file = new File("testInput/input10.txt");
+        File file = new File("src/main/java/testInput/input10.txt");
         Scanner sc = new Scanner(file);
         List<Integer> totalLightsList = new ArrayList<>();
         List<long[]> buttonsList = new ArrayList<>();
