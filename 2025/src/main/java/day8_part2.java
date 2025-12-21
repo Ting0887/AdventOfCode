@@ -1,23 +1,20 @@
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
-public class day8_part1 {
-
-    static class Edge{
+public class day8_part2 {
+    static class Edge {
         int u, v;
         long dist;
-        Edge(int u, int v, long dist){
+        Edge(int u, int v, long dist) {
             this.u = u;
             this.v = v;
             this.dist = dist;
         }
     }
+
     static class UnionFind {
         int[] parent;
         int[] size;
@@ -54,10 +51,9 @@ public class day8_part1 {
         }
     }
 
-    public static void main(String[] args) throws Exception {
-        int Limit = 1000;
+    public static void main(String[] args) throws Exception{
         List<long[]> points = new ArrayList<>();
-        File file = new File("testInput/input8.txt");
+        File file = new File("src/main/java/testInput/input8.txt");
         Scanner sc = new Scanner(file);
         while(sc.hasNext()){
             String line = sc.nextLine();
@@ -80,34 +76,27 @@ public class day8_part1 {
                 long dx = points.get(i)[0] - points.get(j)[0];
                 long dy = points.get(i)[1] - points.get(j)[1];
                 long dz = points.get(i)[2] - points.get(j)[2];
-
                 long dist = dx * dx + dy * dy + dz * dz;
                 edges.add(new Edge(i, j, dist));
             }
         }
+
         edges.sort(Comparator.comparingLong(e -> e.dist));
 
         UnionFind uf = new UnionFind(n);
-        int used = 0;
+        int circuitsLeft = n;
+        long lastXProduct = 0;
 
         for (Edge e : edges) {
-            if (used == Limit) break;
-            uf.union(e.u, e.v); 
-            used++;
+            if (uf.union(e.u, e.v)) {
+                circuitsLeft--;
+                if (circuitsLeft == 1) {
+                    lastXProduct = points.get(e.u)[0] * points.get(e.v)[0];
+                    break;
+                }
+            }
         }
 
-        // 5. Count circuit sizes
-        Map<Integer, Integer> circuitSize = new HashMap<>();
-        for (int i = 0; i < n; i++) {
-            int root = uf.find(i);
-            circuitSize.put(root, circuitSize.getOrDefault(root, 0) + 1);
-        }
-
-        // 6. Find top 3 sizes
-        List<Integer> sizes = new ArrayList<>(circuitSize.values());
-        sizes.sort(Collections.reverseOrder());
-
-        int result = sizes.get(0) * sizes.get(1) * sizes.get(2);
-        System.out.println(result);
+        System.out.println(lastXProduct);
     }
 }
