@@ -14,6 +14,7 @@ public class day9_part1 {
             long y = Long.parseLong(part[1]);
             points.add(new long[]{x, y});
         }
+        sc.close();
         long maxArea = 0;
         for(int i = 0; i < points.size(); i++){
             for(int j = i + 1; j < points.size(); j++){
